@@ -68,6 +68,8 @@ Stable Diffusion本身是行命令式的軟體，要讓它繪圖，便要在終�
 1. 這時也可以把run.ipynb檔案儲存到自己的Google Drive之中，以便日後使用。由於每次啟動本軟體都要使用本檔案，所以最好還是儲存下來，放在方便自己找到的地方。
 
 1. 準備好run.ipynb檔案之後，便可以按一下程式碼儲存格左上角的播放鍵，儲存格內的程式碼便會開始執行。<br>![在Google Colab中執行程式碼](image/run1.png)
+<br>⚠️注意⚠️：免費帳戶的使用者會收到執行禁用程式碼的警告，該警告表示，軟體於執行期間，虛擬機會隨時關閉，所有紀錄會消失（已存放到Google Drive中的圖片不受影響）
+<br>![免費帳戶的使用者會收到執行禁用程式碼的警告，請按「仍要繼續」以執行程式](image/disallowedWarning.png)
 
 1. 由於執行程式要讀寫Google Drive中的「stable-diffusion-webui-colab」目錄，所以必須允許程式取得Google Drive的讀寫權限。這和之前安裝的過程相近，不再贅敘，如果忘記了該怎樣做的話，請參看上一節第8至10步。
 
@@ -120,7 +122,7 @@ Stable Diffusion本身是行命令式的軟體，要讓它繪圖，便要在終�
 1. 這時可以把stable_diffusion_1_5_webui_colab.ipynb儲存到自己的Google Drive之中，以便之後使用。如要儲存檔案，可以用滑鼠按一下選單列左側的【檔案】→【在雲硬碟中儲存複本】：（圖片是install.ipynb，但是做法沒有分別）<br>
 ![在Google Colab中儲存複本](image/saveAs.png)<br>
 ![儲存在Google Drive裏的複本](image/colabCopy.png)<br>
-儲存複本之後，若果有修改都會記錄下來，日後便可以再用，但是就算沒有儲存複本，還是可以進行安裝的。無論有沒有把複本儲存起來，後面的步驟均相同，但如果沒有儲存複本的話，每次都要回到Stable Diffusion WebUI項目的[存儲庫主頁](stable-diffusion-webui-colab)才能夠安裝和開啟軟體。
+儲存複本之後，若果有修改都會記錄下來，日後便可以再用，但是就算沒有儲存複本，還是可以進行安裝的。無論有沒有把複本儲存起來，後面的步驟均相同，但如果沒有儲存複本的話，每次都要回到Stable Diffusion WebUI項目的[存儲庫主頁](https://github.com/camenduru/stable-diffusion-webui-colab/)才能夠安裝和開啟軟體。
 
 1. 準備好stable_diffusion_1_5_webui_colab.ipynb之後，便可以按一下程式碼儲存格左上角的播放鍵，儲存格內的程式碼便會開始執行。<br>
 ![在Google Colab中執行程式碼](image/installationPage.png)
