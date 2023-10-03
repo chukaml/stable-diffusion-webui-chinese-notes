@@ -18,7 +18,7 @@ Stable Diffusion本身是行命令式的軟體，要讓它繪圖，便要在終�
 
 1. 為使之後的安裝過程順利，可以先[登入Google帳戶](https://accounts.google.com/)，並開啟[Google Drive頁面](https://drive.google.com/)。<br>
 ⚠️注意⚠️<br>本軟體會安裝到Google Drive中，所以Google Drive必須有足夠的空間。如果使用免費帳戶，Google只提供15 GB的共用空間，GMail、Google相簿和Google Drive的內容都會計算在15 GB的容量內，可能會導致空間不足，所以如果使用免費Google Drive帳戶的話，建議使用專用帳戶，只作Stable Diffusion WebUI之用，或者使用免安裝的方法，[可以參考下一節](README.md#%E6%9C%AA%E5%AE%89%E8%A3%9D%E6%AA%94%E6%A1%88%E5%88%B0google-drive%E8%A3%8F%E4%B9%8B%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95)。<br>
-另外，Google Colab的官方推特在二零二三年四月二十一日提及[Google Colab無法負擔免費帳戶使用Stable Diffusion](https://twitter.com/thechrisperry/status/1649189902079381505)，所以如果使用免費Google Colab帳戶的話，請自行衡量軟體中途被中斷，甚至被禁用的風險。
+另外，Google Colab的官方推特在二零二三年四月二十一日提及[Google Colab無法負擔免費帳戶使用Stable Diffusion](https://twitter.com/thechrisperry/status/1649189902079381505)，所以如果使用免費Google Colab帳戶的話，請自行衡量軟體在使用期間中斷，正在運算的資料散失，甚至被禁用的風險。
 
 1. 先到@camenduru的Stable Diffusion WebUI項目的[存儲庫主頁](https://github.com/camenduru/stable-diffusion-webui-colab/)。
 
@@ -48,11 +48,11 @@ Stable Diffusion本身是行命令式的軟體，要讓它繪圖，便要在終�
 
 1. 待工作訊息欄內顯示「Installed」字樣，並且程式碼儲存格左上角回復播放鍵⏵狀態，便表示安裝或更新過程完成。<br>![印出「Installed」訊息，並且左上角回復播放鍵⏵狀態，表示安裝程序完成](image/install6.png)
 
-1. 由於Google Colab裏的虛擬機是和其他虛擬機共用資源的，所以完成安裝軟體之後，便要盡快把虛擬機關掉，以釋放佔用的資源給其他人使用。按一下右上方的▼，以開啟【其他連線選項】選單，並且按一下【中斷連線並刪除執行階段】，以關閉現正使用的虛擬機。<br>![關閉現正使用的虛擬機](image/install7.png)<br>記住，就算是在使用免費版本，也不要霸佔著共用資源不利用而空轉。如果長時間佔用資源，Google Colab可能會限制該帳戶之後的使用情況。
+1. 由於Google Colab裏的虛擬機是和其他虛擬機共用資源的，所以完成安裝軟體之後，便要盡快把虛擬機關掉，以釋放佔用的資源給其他人使用。按一下右上方的▼，以開啟【其他連線選項】選單，並且按一下【中斷連線並刪除執行階段】，以關閉現正使用的虛擬機。<br>![關閉現正使用的虛擬機](image/install7.png)<br>記住，就算是在使用免費版本，也不要佔用著共用資源空轉。如果長時間佔用資源，Google Colab可能會限制該帳戶之後的使用情況。
 
-1. 這時會出現警告視窗，請按「是」以完成關閉程序。關閉之後，所有檔案會全部刪除。<br>![在「中斷連線並刪除執行階段」警告視窗中按「是」以完成關閉程序](image/install8.png)
+1. 這時會出現警告視窗，請按「是」以完成關閉程序。關閉之後，虛擬機裏所有的檔案和設定都會全部刪除。<br>![在「中斷連線並刪除執行階段」警告視窗中按「是」以完成關閉程序](image/install8.png)
 
-1. 返回[Google Drive主頁](https://drive.google.com/)，可以看到已新增了一個「stable-diffusion-webui-colab」目錄，表示已安裝好了Stable Diffusion WebUI軟體。日後執行本軟體時均會使用「stable-diffusion-webui-colab」目錄裏的檔案，所以切勿移動本目錄，也不要更改它的名字。另外可以看到，現在已經使用了超過8 GB的空間，佔用了超過一半的免費空間。<br>![完成安裝步驟後，會在Google Drive裏出現「stable-diffusion-webui-colab」目錄](image/install9.png)<br>
+1. 返回[Google Drive主頁](https://drive.google.com/)，可以看到已新增了一個「stable-diffusion-webui-colab」的目錄，表示已安裝好了Stable Diffusion WebUI軟體。日後執行本軟體時均會使用「stable-diffusion-webui-colab」目錄裏的檔案，所以切勿移動本目錄，也不要更改它的名字。另外可以看到，現在已經使用了超過8 GB的空間，佔用了超過一半的免費空間。<br>![完成安裝步驟後，會在Google Drive裏出現「stable-diffusion-webui-colab」目錄](image/install9.png)<br>
 ⚠️注意⚠️<br>安裝程式預設不會安裝ControlNet（用來控制人物姿勢的插件）。如果同時安裝ControlNet v1.1，耗用的空間會暴增至12 GB以上。
 
 現在完成了第一部份，跟著我們看看如何打開軟體使用Stable Diffusion WebUI。
