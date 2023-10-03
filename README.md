@@ -2,7 +2,7 @@
 
 ## 什麼是Stable Diffusion？
 
-Stable Diffusion是由[StabilityAI](https://stability.ai/)、CompVis和Runway合作開發的開源軟體，旨在根據文字的描述來產生詳細圖像，並於二零二二年八月二十二日首次公開發佈。Stable Diffusion是「穩定的擴散」的意思，它使用擴散模型（diffusion model）的一種變體，稱為「潛擴散模型」（latent diffusion model; LDM）。因為擴散模型本身須反覆多次做順擴散和逆擴散的迭代運算，運算時間始終太長，並不切合實際使用。「潛擴散模型」是把順擴散和逆擴散運算改為在潛空間（latent space，也是「潛擴散」的意義）進行，而不在像素空間（pixel space）進行，使運算時間大大縮短，成為實用的運算法。
+Stable Diffusion是由[StabilityAI](https://stability.ai/)、CompVis和Runway合作開發的開源軟體，旨在根據文字的描述來產生詳細圖像，並於二零二二年八月二十二日首次公開發佈。Stable Diffusion是「穩定的擴散」的意思，它使用擴散模型（diffusion model）的一種變體，稱為「潛擴散模型」（latent diffusion model; LDM）。因為使用擴散模型須反覆多次做逆擴散（即去噪過程）的迭代運算，運算時間始終太長，並不切合實際使用。「潛擴散模型」是逆擴散運算改為在潛空間（latent space，也是「潛擴散」的意義）中進行，而不在像素空間（pixel space）之中進行，使運算時間大大縮短，成為實用的運算法。（[這篇英文文章有詳細解釋](https://www.promptengineering.org/the-possibilities-of-ai-art-examining-stable-diffusion/)）
 
 ## 為什麼使用Stable Diffusion WebUI？
 
@@ -17,12 +17,12 @@ Stable Diffusion本身是行命令式的軟體，要讓它繪圖，便要在終�
 本開源軟體可以在Windows、Linux和Apple Silicon裏安裝，甚至可以在[Google Colaboratory](https://colab.research.google.com/)裏運行，本筆記以Google Colab為安裝目標，其他系統請參考Stable Diffusion WebUI的[GitHub網頁說明](https://github.com/AUTOMATIC1111/stable-diffusion-webui#installation-and-running)。
 
 1. 為使之後的安裝過程順利，可以先[登入Google帳戶](https://accounts.google.com/)，並開啟[Google Drive頁面](https://drive.google.com/)。<br>
-⚠️注意⚠️<br>本軟體會安裝到Google Drive中，所以Google Drive必須有足夠的空間。如果使用免費帳戶，Google只提供15 GB的共用空間，GMail、Google相簿和Google Drive的內容都會計算在15 GB的容量內，可能會導致空間不足，所以如果使用免費帳戶的話，建議使用專用帳戶，只作Stable Diffusion WebUI之用，或者使用免安裝的方法，[可以參考下一節](README.md#%E6%9C%AA%E5%AE%89%E8%A3%9D%E6%AA%94%E6%A1%88%E5%88%B0google-drive%E8%A3%8F%E4%B9%8B%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95)。<br>
-另外，Google Colab的官方推特在二零二三年四月二十一日提及[Google Colab無法負擔免費帳戶使用Stable Diffusion](https://twitter.com/thechrisperry/status/1649189902079381505)，所以如果使用免費帳戶的話，請自行衡量可能被禁用的風險。
+⚠️注意⚠️<br>本軟體會安裝到Google Drive中，所以Google Drive必須有足夠的空間。如果使用免費帳戶，Google只提供15 GB的共用空間，GMail、Google相簿和Google Drive的內容都會計算在15 GB的容量內，可能會導致空間不足，所以如果使用免費Google Drive帳戶的話，建議使用專用帳戶，只作Stable Diffusion WebUI之用，或者使用免安裝的方法，[可以參考下一節](README.md#%E6%9C%AA%E5%AE%89%E8%A3%9D%E6%AA%94%E6%A1%88%E5%88%B0google-drive%E8%A3%8F%E4%B9%8B%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95)。<br>
+另外，Google Colab的官方推特在二零二三年四月二十一日提及[Google Colab無法負擔免費帳戶使用Stable Diffusion](https://twitter.com/thechrisperry/status/1649189902079381505)，所以如果使用免費Google Colab帳戶的話，請自行衡量軟體中途被中斷，甚至被禁用的風險。
 
 1. 先到@camenduru的Stable Diffusion WebUI項目的[存儲庫主頁](https://github.com/camenduru/stable-diffusion-webui-colab/)。
 
-1. 捲動網頁到下方，那裏列出各種安裝方法，包括安裝所有Stable Diffusion WebUI檔案到Google Drive中，再運行軟體的方法，或者不把檔案安裝到Google Drive中，直接運行軟體的其他方法。我們會把Stable Diffusion WebUI檔案安裝到Google Drive中，以便每次啟用都可以取得上一次的運行狀態，並可以安裝更多的插件使用，也讓產生的圖片可以儲存到Google Drive中。如果因為某些原因，例如只想體驗一下某Checkpoint模型的感受，未決定是否要使用它，或者Google Drive的空間不足，未能安裝軟體，[可以參考下一節](README.md#%E6%9C%AA%E5%AE%89%E8%A3%9D%E6%AA%94%E6%A1%88%E5%88%B0google-drive%E8%A3%8F%E4%B9%8B%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95)。
+1. 捲動網頁到下方，那裏列出各種安裝方法，包括把所有Stable Diffusion WebUI檔案儲存到Google Drive中，再運行軟體的方法，或者不把檔案安裝到Google Drive中，直接運行軟體的其他方法。我們會把Stable Diffusion WebUI檔案先安裝到Google Drive中，以便每次啟用都可以取得上一次的運行狀態，並可以安裝更多的插件使用，也讓產生的圖片可以儲存到Google Drive中。如果因為某些原因，例如只想體驗一下某Checkpoint模型的風格，未決定是否要長期使用它，或者Google Drive的空間不足，未能安裝軟體，[可以參考下一節](README.md#%E6%9C%AA%E5%AE%89%E8%A3%9D%E6%AA%94%E6%A1%88%E5%88%B0google-drive%E8%A3%8F%E4%B9%8B%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95)。
 
 1. 轉到本項目的[drive分支頁](https://github.com/camenduru/stable-diffusion-webui-colab/tree/drive)，可以看到[把WebUI Colab安裝到Google Drive](https://github.com/camenduru/stable-diffusion-webui-colab/tree/drive#-install-the-webui-colab-to-google-drive)（🦒 Install the WebUI Colab to Google Drive）一節之下有三項：<br>
 ![把WebUI Colab安裝到Google Drive](image/InstallWebUIColab.png)
