@@ -125,7 +125,7 @@ Stable Diffusion本身是行命令式的軟體，要讓它繪圖，便要在終�
 儲存複本之後，若果有修改都會記錄下來，日後便可以再用，但是就算沒有儲存複本，還是可以進行安裝的。無論有沒有把複本儲存起來，後面的步驟均相同，但如果沒有儲存複本的話，每次都要回到Stable Diffusion WebUI項目的[存儲庫主頁](https://github.com/camenduru/stable-diffusion-webui-colab/)才能夠安裝和開啟軟體。
 
 1. 準備好stable_diffusion_1_5_webui_colab.ipynb之後，便可以按一下程式碼儲存格左上角的播放鍵，儲存格內的程式碼便會開始執行。<br>
-![在Google Colab中執行程式碼](image/installationPage.png)
-   - ⚠️如果未把複本儲存到自己的Google Drive裏，會出現警告視窗，請按「仍要執行」以繼續執行程式。<br>![未把複本儲存到自己的Google Drive裏出現的警告視窗，按「仍要執行」以繼續執行程式](image/install1.png) 
+![在Google Colab中執行程式碼](image/run17.png)
+   - ⚠️如果未把複本儲存到自己的Google Drive裏，會出現警告視窗，請按「仍要執行」以繼續執行程式。<br>![未把複本儲存到自己的Google Drive裏出現的警告視窗，按「仍要執行」以繼續執行程式](image/run18.png)
 
-1. 由於要下載和安裝軟體檔案，並且初始化軟體，還要從Cloudflare Tunnel取得臨時網址，以便透過瀏覽器介面操作Google Colab的虛擬機裏的軟體，過程繁複，請耐心等候約十分鐘。<br>![正在Google Colab中執行程式碼](image/run2.png)
+1. 由於要下載和安裝軟體檔案，並且初始化軟體，還要從Cloudflare Tunnel取得臨時網址，以便透過瀏覽器介面操作Google Colab的虛擬機裏的軟體，過程繁複，請耐心等候約十分鐘。<br>![正在Google Colab中執行程式碼](image/run19.png)
