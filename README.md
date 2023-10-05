@@ -27,7 +27,7 @@ Stable Diffusion本身是行命令式的軟體，要讓它繪圖，便要在終�
 1. 轉到本項目的[drive分支頁](https://github.com/camenduru/stable-diffusion-webui-colab/tree/drive)，可以看到[把WebUI Colab安裝到Google Drive](https://github.com/camenduru/stable-diffusion-webui-colab/tree/drive#-install-the-webui-colab-to-google-drive)（🦒 Install the WebUI Colab to Google Drive）一節之下有三項：<br>
 ![把WebUI Colab安裝到Google Drive](image/InstallWebUIColab.png)
 
-1. 首先要把WebUI Colab安裝到Google Drive裏，所以按一下第一列第一欄的[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/camenduru/stable-diffusion-webui-colab/blob/drive/install.ipynb)，以在Google Colab中開啟install.ipynb檔。
+1. 首先要把WebUI Colab安裝到Google Drive裏，所以按一下第一列第一欄的[![Open In Colab](https://user-images.githubusercontent.com/54370274/224839804-50c0c18b-3960-4a1c-b7fa-3c7074b11779.svg)](https://colab.research.google.com/github/camenduru/stable-diffusion-webui-colab/blob/drive/install.ipynb)，以在Google Colab中開啟install.ipynb檔。
 
 1. 這時可以把install.ipynb儲存到自己的Google Drive之中，其他兩個Google Colab檔也可以儲存到Google Drive裏，以便之後使用。如要儲存檔案，可以用滑鼠按一下選單列左側的【檔案】→【在雲硬碟中儲存複本】：<br>
 ![在Google Colab中儲存複本](image/saveAs.png)<br>
@@ -63,7 +63,7 @@ Stable Diffusion本身是行命令式的軟體，要讓它繪圖，便要在終�
 
 ### 已把Stable Diffusion WebUI的所需檔案安裝到Google Drive裏之使用方法
 
-1. 現在返回Stable Diffusion WebUI項目的[分支頁](https://github.com/camenduru/stable-diffusion-webui-colab/tree/drive#-install-the-webui-colab-to-google-drive)，按第二列的[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/camenduru/stable-diffusion-webui-colab/blob/drive/run.ipynb)，以在Google Colab中開啟run.ipynb檔案。
+1. 現在返回Stable Diffusion WebUI項目的[分支頁](https://github.com/camenduru/stable-diffusion-webui-colab/tree/drive#-install-the-webui-colab-to-google-drive)，按第二列的[![Open In Colab](https://user-images.githubusercontent.com/54370274/224839804-50c0c18b-3960-4a1c-b7fa-3c7074b11779.svg)](https://colab.research.google.com/github/camenduru/stable-diffusion-webui-colab/blob/drive/run.ipynb)，以在Google Colab中開啟run.ipynb檔案。
 
 1. 這時也可以把run.ipynb檔案儲存到自己的Google Drive之中，以便日後使用。由於每次啟動本軟體都要使用本檔案，所以最好還是儲存下來，放在方便自己找到的地方。
 
@@ -125,7 +125,7 @@ Stable Diffusion本身是行命令式的軟體，要讓它繪圖，便要在終�
 儲存複本之後，若果有修改都會記錄下來，日後便可以再用，但是就算沒有儲存複本，還是可以進行安裝的。無論有沒有把複本儲存起來，後面的步驟均相同，但如果沒有儲存複本的話，每次都要回到Stable Diffusion WebUI項目的[存儲庫主頁](https://github.com/camenduru/stable-diffusion-webui-colab/)才能夠安裝和開啟軟體。
 
 1. 準備好stable_diffusion_1_5_webui_colab.ipynb之後，便可以按一下程式碼儲存格左上角的播放鍵，儲存格內的程式碼便會開始執行。<br>
-![在Google Colab中執行程式碼](image/run17.png)
-   - ⚠️如果未把複本儲存到自己的Google Drive裏，會出現警告視窗，請按「仍要執行」以繼續執行程式。<br>![未把複本儲存到自己的Google Drive裏出現的警告視窗，按「仍要執行」以繼續執行程式](image/run18.png) 
+![在Google Colab中執行程式碼](image/installationPage.png)
+   - ⚠️如果未把複本儲存到自己的Google Drive裏，會出現警告視窗，請按「仍要執行」以繼續執行程式。<br>![未把複本儲存到自己的Google Drive裏出現的警告視窗，按「仍要執行」以繼續執行程式](image/install1.png) 
 
-1. 由於要下載和安裝軟體檔案，並且初始化軟體，還要從Cloudflare Tunnel取得臨時網址，以便透過瀏覽器介面操作Google Colab的虛擬機裏的軟體，過程繁複，請耐心等候約十分鐘。<br>![正在Google Colab中執行程式碼](image/run19.png)
+1. 由於要下載和安裝軟體檔案，並且初始化軟體，還要從Cloudflare Tunnel取得臨時網址，以便透過瀏覽器介面操作Google Colab的虛擬機裏的軟體，過程繁複，請耐心等候約十分鐘。<br>![正在Google Colab中執行程式碼](image/run2.png)
